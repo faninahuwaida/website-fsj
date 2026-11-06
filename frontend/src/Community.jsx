@@ -19,27 +19,27 @@ import life5 from './assets/life-5.png';
 import life6 from './assets/life-6.png';
 
 // PARTNER LOGOS 
-import partner1 from './assets/logo-part-1.png';
-import partner2 from './assets/logo-part-2.png';
-import partner3 from './assets/logo-part-3.jpg';
-import partner4 from './assets/logo-part-4.png';  
-import partner5 from './assets/logo-part-5.png';
-import partner6 from './assets/logo-part-6.jpg';
-import partner7 from './assets/logo-part-7.png';
-import partner8 from './assets/logo-part-8.png';
-import partner9 from './assets/logo-part-9.png';
-import partner10 from './assets/logo-part-10.png';
-import partner11 from './assets/logo-part-11.png';
-import partner12 from './assets/logo-part-12.png';
-import partner13 from './assets/logo-part-13.png';
-import partner14 from './assets/logo-part-14.png';
-import partner15 from './assets/logo-part-15.jpg';
-import partner16 from './assets/logo-part-16.png';
-import partner17 from './assets/logo-part-17.jpg';
-import partner18 from './assets/logo-part-18.png';
-import partner19 from './assets/logo-part-19.png';
-import partner20 from './assets/logo-part-20.jpg';
-import partner21 from './assets/logo-part-21.png';
+import partner1 from './assets/part-1-logo.png';
+import partner2 from './assets/part-2-logo.png';
+import partner3 from './assets/part-3-logo.png';
+import partner4 from './assets/part-4-logo.png';
+import partner5 from './assets/part-5-logo.png';
+import partner6 from './assets/part-6-logo.jpg';
+import partner7 from './assets/part-7-logo.PNG';
+import partner8 from './assets/part-8-logo.png';
+import partner9 from './assets/part-9-logo.png';
+import partner10 from './assets/part-10-logo.png';
+import partner11 from './assets/part-11-logo.png';
+import partner12 from './assets/part-12-logo.png';
+import partner13 from './assets/part-13-logo.jpg';
+import partner14 from './assets/part-14-logo.PNG';
+import partner15 from './assets/part-15-logo.png';
+import partner16 from './assets/part-16-logo.jpg';
+import partner17 from './assets/part-17-logo.jpg';
+import partner18 from './assets/part-18-logo.png';
+import partner19 from './assets/part-19-logo.png';
+import partner20 from './assets/part-20-logo.png';
+import partner21 from './assets/part-21-logo.jpg';
 
 
 /* ========================================================= */
