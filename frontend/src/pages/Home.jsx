@@ -1,6 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import blogMT from '../assets/blog-MT.png';
+import blogBestIntern from '../assets/blog-bestintern.png';
+import blogStory from '../assets/blog-story.png';
+import blogCoasterra from '../assets/blog-coasterra.png';
+
+const discoverCards = [
+  { img: blogMT, pos: 'center top', title: 'Participant Success Story: Journey to MT Program' },
+  { img: blogStory, pos: 'center center', title: 'Ragam Cerita Bertumbuh: Menemukan Ruang, Peluang & Keberanian di FSJ' },
+  { img: blogBestIntern, pos: 'center 30%', title: 'Beyond Expectations: Kisah Dedikasi Dua Best Intern FSJ' },
+  { img: blogCoasterra, pos: 'center center', title: 'Coasterra: Connecting People, Science & Action for Resilient Coasts' },
+]
+
 const navLinks = [
   { href: "#beranda", label: "Beranda" },
   { href: "#features", label: "Fasilitas" },
@@ -133,7 +145,7 @@ const testimonialsData = [
 ];
 
 // Data untuk Blog
-const blogData = [
+export const blogData = [
   {
     id: 1,
     title: (
@@ -142,7 +154,7 @@ const blogData = [
       </>
     ),
     alt: "Participant Success Story: Journey to MT Program",
-    image: "" // Kosongkan dulu
+    image: blogMT // Kosongkan dulu
   },
   {
     id: 2,
@@ -153,7 +165,7 @@ const blogData = [
       </>
     ),
     alt: "Ragam Cerita Bertumbuh: Menemukan Ruang, Peluang & Keberanian di FSJ",
-    image: "" // Kosongkan dulu
+    image: blogStory // Kosongkan dulu
   },
   {
     id: 3,
@@ -165,7 +177,7 @@ const blogData = [
       </>
     ),
     alt: "Beyond Expectations: Kisah Dedikasi Dua Best Intern FSJ",
-    image: "" // Kosongkan dulu
+    image: blogBestIntern // Kosongkan dulu
   },
   {
     id: 4,
@@ -178,7 +190,7 @@ const blogData = [
       </>
     ),
     alt: "Coasterra: Connecting People, Science & Action for Resilient Coasts",
-    image: "" // Kosongkan dulu
+    image: blogCoasterra // Kosongkan dulu
   }
 ];
 
