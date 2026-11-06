@@ -1759,3 +1759,8 @@ header.scrolled .profile-text {
   /* Memudar dari warna #FFC107 (bawah) hingga transparan di tengah (60%) */
   background: linear-gradient(to top, rgba(255, 193, 7, 0.9) 0%, rgba(255, 193, 7, 0) 65%);
 }
+
+.impact-timeline a.impact-row {
+  color: inherit;
+  text-decoration: none;
+}

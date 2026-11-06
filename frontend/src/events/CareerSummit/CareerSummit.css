@@ -1,0 +1,403 @@
+/* =========================================================
+   CAREER SUMMIT PAGE
+   ========================================================= */
+
+.career-page {
+  width: 100%;
+
+  background: #ffffff;
+  color: #1f1f1f;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.career-hero {
+  width: 100%;
+  min-height: 400px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+.career-hero-overlay {
+  width: 100%;
+  min-height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px 24px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(1, 37, 131, 0.9) 0%,
+    rgba(254, 184, 0, 0.9) 100%
+  );
+}
+
+.career-hero-content {
+  width: 100%;
+  max-width: 1000px;
+
+  text-align: center;
+}
+
+.career-hero-content h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(30px, 5vw, 45px);
+  font-weight: 700;
+  line-height: 1.2;
+  transform: translateY(-20px);
+}
+
+.career-hero-content p {
+  margin: 12px 0 0;
+
+  color: #feb800;
+
+  font-family: "Noto Serif", serif;
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 500;
+  line-height: 1.4;
+  transform: translateY(-10px);
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.career-main {
+  width: min(1180px, calc(100% - 48px));
+
+  margin: 0 auto;
+  padding: 60px 0 90px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+
+  gap: 75px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.career-content {
+  min-width: 0;
+}
+
+.career-section {
+  margin-bottom: 35px;
+
+  scroll-margin-top: 110px;
+}
+
+.career-section--last {
+  margin-bottom: 0;
+}
+
+.career-section h2 {
+  margin: 0 0 20px;
+
+  color: #111111;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.16;
+}
+
+.career-section h3 {
+  margin: 0 0 16px;
+
+  color: #111111;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.career-section p,
+.career-media-text p {
+  margin: 0 0 16px;
+
+  color: #333333;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.65;
+
+  text-align: justify;
+}
+
+
+/* =========================================================
+   MAIN IMAGE
+   ========================================================= */
+
+.career-main-image {
+  width: 65%;
+
+  margin: 15px auto 25px;
+}
+
+.career-main-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   INSIGHT LIST
+   ========================================================= */
+
+.career-insight-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.career-insight-list li {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-bottom: 8px;
+}
+
+.career-insight-list li > span {
+  flex-shrink: 0;
+}
+
+.career-insight-list p {
+  margin: 0;
+}
+
+
+/* =========================================================
+   CV SCREENING
+   ========================================================= */
+
+.career-media-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+
+  gap: 30px;
+
+  align-items: start;
+
+  margin-top: 18px;
+}
+
+.career-media-text {
+  transform: translateY(-8px);
+}
+
+.career-media-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.career-sidebar-inner {
+  position: sticky;
+  top: 110px;
+}
+
+.career-sidebar h3 {
+  margin: 0 0 25px;
+
+  color: #111111;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.career-toc {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+
+.career-toc a {
+  position: relative;
+
+  display: block;
+
+  padding-left: 16px;
+
+  color: #4a4a4a;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.career-toc a::before {
+  content: "";
+
+  position: absolute;
+
+  top: 3px;
+  left: 0;
+
+  width: 2px;
+  height: calc(100% - 6px);
+
+  background: #dddddd;
+}
+
+.career-toc a:hover {
+  color: #012583;
+
+  transform: translateX(2px);
+}
+
+.career-toc a:hover::before {
+  background: #feb800;
+}
+
+
+/* =========================================================
+   SCROLL ANIMATION
+   ========================================================= */
+
+.career-reveal {
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.career-reveal.show {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .career-main {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+  .career-sidebar {
+    grid-row: 1;
+  }
+
+  .career-sidebar-inner {
+    position: static;
+  }
+
+  .career-media-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .career-hero,
+  .career-hero-overlay {
+    min-height: 320px;
+  }
+
+  .career-hero-content h1 {
+    font-size: 28px;
+  }
+
+  .career-hero-content p {
+    font-size: 17px;
+  }
+
+  .career-hero-content p br,
+  .career-section h2 br {
+    display: none;
+  }
+
+  .career-main {
+    width: calc(100% - 32px);
+
+    padding: 40px 0 70px;
+  }
+
+  .career-section h2 {
+    font-size: 24px;
+  }
+
+  .career-main-image {
+    width: 100%;
+  }
+
+  .career-section p,
+  .career-media-text p {
+    text-align: left;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .career-reveal {
+    opacity: 1;
+
+    transform: none;
+
+    transition: none;
+  }
+}

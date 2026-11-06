@@ -1,0 +1,537 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+
+/* =========================================================
+   STEP UP PAGE
+   ========================================================= */
+
+.stepup-page {
+  width: 100%;
+
+  background: #ffffff;
+  color: #1f1f1f;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.stepup-hero {
+  width: 100%;
+  min-height: 400px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+
+.stepup-hero-overlay {
+  width: 100%;
+  min-height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px 24px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(1, 37, 131, 0.9) 0%,
+    rgba(254, 184, 0, 0.9) 100%
+  );
+}
+
+
+.stepup-hero-content {
+  width: 100%;
+  max-width: 900px;
+
+  text-align: center;
+
+  transform: translateY(10px);
+}
+
+
+.stepup-hero-content h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(30px, 5vw, 45px);
+  font-weight: 700;
+  line-height: 1.2;
+
+  transform: translateY(-20px);
+}
+
+
+.stepup-hero-content p {
+  margin: 12px 0 0;
+
+  color: #feb800;
+
+  font-family: "Noto Serif", serif;
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 500;
+  line-height: 1.4;
+
+  transform: translateY(-10px);
+}
+
+
+/* =========================================================
+   MAIN LAYOUT
+   ========================================================= */
+
+.stepup-main {
+  width: min(1180px, calc(100% - 48px));
+
+  margin: 0 auto;
+  padding: 65px 0 100px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+
+  gap: 75px;
+
+  align-items: start;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.stepup-content {
+  min-width: 0;
+}
+
+
+.stepup-section {
+  margin-bottom: 45px;
+
+  scroll-margin-top: 110px;
+}
+
+
+.stepup-section--last {
+  margin-bottom: 0;
+}
+
+
+.stepup-section h2 {
+  margin: 0 0 22px;
+
+  color: #171717;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.16;
+  letter-spacing: -0.4px;
+}
+
+
+.stepup-section h3 {
+  margin: 0 0 14px;
+
+  color: #171717;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+
+.stepup-section p,
+.stepup-media-content p {
+  margin: 0 0 17px;
+
+  color: #333333;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.75;
+
+  text-align: justify;
+}
+
+
+/* =========================================================
+   INTRO
+   TEXT + IMAGE
+   ========================================================= */
+
+.stepup-intro-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.15fr)
+    minmax(0, 0.65fr);
+
+  gap: 35px;
+
+  align-items: start;
+}
+
+
+.stepup-intro-image {
+  width: 100%;
+}
+
+
+.stepup-intro-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   FOCUS LIST
+   ========================================================= */
+
+.stepup-focus-list {
+  margin: 18px 0 0;
+  padding-left: 25px;
+
+  color: #333333;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+
+.stepup-focus-list li {
+  margin-bottom: 5px;
+}
+
+.stepup-activity-intro {
+  margin: 0 0 25px;
+
+  color: #333333;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.75;
+
+  text-align: justify;
+}
+
+/* =========================================================
+   IMAGE + ACTIVITY LIST
+   ========================================================= */
+
+.stepup-media-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.95fr)
+    minmax(0, 1.05fr);
+
+  gap: 35px;
+
+  align-items: start;
+
+  margin-top: 0;
+}
+
+.stepup-media-image {
+  width: 100%;
+}
+
+.stepup-media-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+.stepup-media-content {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   ACTIVITY LIST
+   ========================================================= */
+
+.stepup-activity-list {
+  margin: 0;
+  padding-left: 20px;
+
+  color: #333333;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+  transform: translateY(-8px);
+}
+
+.stepup-activity-list li {
+  margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   SCHOOL LIST
+   ========================================================= */
+
+.stepup-school-list {
+  margin: 20px 0 0;
+  padding: 0;
+
+  list-style: none;
+
+  color: #333333;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+
+.stepup-school-list li {
+  margin-bottom: 7px;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.stepup-sidebar {
+  min-width: 0;
+}
+
+
+.stepup-sidebar-inner {
+  position: sticky;
+
+  top: 110px;
+}
+
+
+.stepup-sidebar h3 {
+  margin: 0 0 25px;
+
+  color: #171717;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+.stepup-toc {
+  display: flex;
+  flex-direction: column;
+
+  gap: 23px;
+}
+
+
+.stepup-toc a {
+  position: relative;
+
+  display: block;
+
+  padding-left: 16px;
+
+  color: #4a4a4a;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.stepup-toc a::before {
+  content: "";
+
+  position: absolute;
+
+  top: 3px;
+  left: 0;
+
+  width: 2px;
+  height: calc(100% - 6px);
+
+  border-radius: 5px;
+
+  background: #e1e1e1;
+
+  transition: background 0.2s ease;
+}
+
+
+.stepup-toc a:hover {
+  color: #0050b5;
+
+  transform: translateX(2px);
+}
+
+
+.stepup-toc a:hover::before {
+  background: #feb800;
+}
+
+
+/* =========================================================
+   SCROLL ANIMATION
+   ========================================================= */
+
+.stepup-reveal {
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+
+.stepup-reveal.show {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .stepup-main {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+
+  .stepup-sidebar {
+    grid-row: 1;
+  }
+
+
+  .stepup-sidebar-inner {
+    position: static;
+  }
+
+
+  .stepup-intro-row,
+  .stepup-media-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+  .stepup-hero,
+  .stepup-hero-overlay {
+    min-height: 250px;
+  }
+
+
+  .stepup-hero-content {
+    transform: none;
+  }
+
+
+  .stepup-hero-content h1 {
+    font-size: 30px;
+
+    transform: none;
+  }
+
+
+  .stepup-hero-content p {
+    font-size: 17px;
+
+    transform: none;
+  }
+
+
+  .stepup-main {
+    width: calc(100% - 32px);
+
+    padding: 42px 0 70px;
+  }
+
+
+  .stepup-section h2 {
+    font-size: 24px;
+  }
+
+
+  .stepup-section h2 br {
+    display: none;
+  }
+
+
+  .stepup-section h3 {
+    font-size: 18px;
+  }
+
+
+  .stepup-section p,
+  .stepup-media-content p,
+  .stepup-focus-list,
+  .stepup-activity-list,
+  .stepup-school-list {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+
+  .stepup-section p,
+  .stepup-media-content p {
+    text-align: left;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .stepup-reveal {
+    opacity: 1;
+
+    transform: none;
+
+    transition: none;
+  }
+}
