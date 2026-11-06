@@ -1,0 +1,797 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@500&display=swap');
+
+/* ========================================================= */
+/* CSS COMMUNITY - FIRST STEP JOURNEY                        */
+/* ========================================================= */
+
+.com-page {
+  background-color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.com-page *,
+.com-page *::before,
+.com-page *::after {
+  box-sizing: border-box;
+}
+
+.com-page h1,
+.com-page h2,
+.com-page h3,
+.com-page h4,
+.com-page p {
+  margin: 0;
+}
+
+.com-page ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.com-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.com-page img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ========================================================= */
+/* 1. HERO                                                   */
+/* ========================================================= */
+.com-hero {
+  position: relative;
+  padding: 80px 20px;
+  width: 100%;
+  min-height: 566px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+.com-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.com-hero-deco {
+  position: absolute;
+  max-width: none !important;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+}
+
+.com-hero-deco-left {
+  left: 0;
+  top: 0;
+}
+
+.com-hero-deco-right {
+  left: 92%;
+  top: 74%;
+  transform: translate(-50%, -50%) rotate(90deg) scaleY(-1);
+}
+
+.com-hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  //animation: ct-fade-up 0.8s ease backwards;
+}
+
+.com-hero-tag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.com-hero-line {
+  width: 50px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #fdbe34;
+}
+
+.com-hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fff;
+  margin: 0 0 16px 0;
+}
+
+.com-hero p {
+  max-width: 578px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  margin-bottom: 40px;
+  line-height: 1.3;
+}
+
+.com-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 0.16px;
+}
+
+.com-breadcrumb .current {
+  color: #fdbe34;
+}
+
+
+/* ========================================================= */
+/* GENERAL                                                   */
+/* ========================================================= */
+.com-eyebrow {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #012583;
+  font-size: 26px;
+  display: block;
+}
+
+
+/* =========================================================
+   2. DISCOVER SECTION
+========================================================= */
+.com-discover {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.discover-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.discover-title-area {
+  text-align: center;
+}
+
+.discover-title-area .com-eyebrow {
+  margin-bottom: 8px;
+}
+
+.discover-header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+.discover-scroll {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+.discover-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(90deg, #feb800, #ffd463);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  min-height: 480px;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* lapisan biru yang muncul saat hover */
+.discover-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(160deg, #0242e8, #012583);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+.card-img-real {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 16px;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.discover-card .card-img-real {
+  transform-origin: center;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+.card-content h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.4;
+  margin: 0 0 24px 0;
+  padding: 8px 4px 0;
+  transition: color 0.3s ease, transform 0.35s ease;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+.btn-discover-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px 0;
+  background-color: #ffffff;
+  border: 3px solid #feb800;
+  border-radius: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  cursor: pointer;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn-arrow {
+  width: 0;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: width 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+.btn-discover-card:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   HOVER EFFECTS
+========================================================= */
+@media (hover: hover) {
+  .discover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 30px rgba(1, 37, 131, 0.35);
+  }
+
+  .discover-card:hover::before,
+  .discover-card:hover::after {
+    opacity: 1;
+  }
+
+  .discover-card:hover .card-img-real {
+    transform: scale(1.08);
+  }
+
+  .discover-card:hover .card-content h3 {
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+
+  .discover-card:hover .btn-discover-card {
+    background-color: #feb800;
+    border-color: #ffffff;
+    color: #000000;
+  }
+
+  .discover-card:hover .btn-arrow {
+    width: 18px;
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* sentuhan di HP / tablet */
+.discover-card:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================================================
+   ANIMASI MUNCUL (scroll reveal)
+========================================================= */
+.discover-scroll:not(.is-visible) .discover-card {
+  opacity: 0;
+}
+
+.discover-scroll.is-visible .discover-card {
+  animation: com-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+@keyframes com-rise {
+  from {
+    opacity: 0;
+    transform: translateY(48px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   3. GALLERY SECTION
+========================================================= */
+.com-gallery-new {
+  padding: 35px 6.2% 30px 6.2%;
+  background: linear-gradient(
+    to bottom,
+    #ffffff 0%,
+    #e9effd 10%,
+    #aabff5 27%,
+    #4177ec 55%,
+    #1650e8 75%,
+    #ffffff 100%
+  );
+}
+
+
+/* =========================================================
+   GALLERY / IMPACT HEADER
+========================================================= */
+.insights-header-center {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 30px auto;
+}
+
+.center-eyebrow {
+  display: block;
+  text-align: center;
+  color: #012583;
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.section-title-center {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #000000;
+  margin: 0;
+}
+
+.insights-desc {
+  max-width: 849px;
+  margin: 28px auto 0 auto;
+  font-family: 'Noto Serif', serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #111111;
+}
+
+
+/* =========================================================
+   GALLERY GRID
+========================================================= */
+.gallery-grid-proportional {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(2, 260px);
+  gap: 5px;
+}
+
+.gal-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #eaeaea;
+  min-width: 0;
+  min-height: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gal-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+@media (hover: hover) {
+  .gal-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+    z-index: 2;
+  }
+
+  .gal-item:hover img {
+    transform: scale(1.03);
+  }
+}
+
+/* animasi muncul */
+.gallery-grid-proportional:not(.is-visible) .gal-item {
+  opacity: 0;
+}
+
+.gallery-grid-proportional.is-visible .gal-item {
+  animation: com-fade-up 0.7s ease backwards;
+}
+
+.gallery-grid-proportional.is-visible .gal-item:nth-child(2) { animation-delay: 0.08s; }
+.gallery-grid-proportional.is-visible .gal-item:nth-child(3) { animation-delay: 0.16s; }
+.gallery-grid-proportional.is-visible .gal-item:nth-child(4) { animation-delay: 0.24s; }
+.gallery-grid-proportional.is-visible .gal-item:nth-child(5) { animation-delay: 0.32s; }
+.gallery-grid-proportional.is-visible .gal-item:nth-child(6) { animation-delay: 0.4s; }
+
+@keyframes com-fade-up {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* posisi grid */
+.gal-main-top     { grid-column: 1 / span 2; grid-row: 1; }
+.gal-top-middle   { grid-column: 3;          grid-row: 1; }
+.gal-top-right    { grid-column: 4;          grid-row: 1; }
+.gal-bottom-left  { grid-column: 1;          grid-row: 2; }
+.gal-main-bottom  { grid-column: 2 / span 2; grid-row: 2; }
+.gal-bottom-right { grid-column: 4;          grid-row: 2; }
+
+
+/* =========================================================
+   4. IMPACT SECTION
+========================================================= */
+.com-impact {
+  padding: 50px 10% 70px;
+  background-color: #ffffff;
+}
+
+/* ---- logo bergerak ---- */
+.impact-marquee {
+  position: relative;
+  max-width: 1120px;
+  height: 220px;
+  margin: 0 auto 30px auto;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.impact-marquee-track {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: com-marquee 30s linear infinite;
+}
+
+.impact-marquee:hover .impact-marquee-track {
+  animation-play-state: paused;
+}
+
+.impact-marquee-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.impact-logo {
+  width: 120px;
+  height: 120px;
+  margin-right: 60px;
+  flex-shrink: 0;
+}
+
+.impact-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.impact-marquee-fade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #fff 0%,
+    rgba(255, 255, 255, 0) 20%,
+    rgba(255, 255, 255, 0) 80%,
+    #fff 100%
+  );
+}
+
+@keyframes com-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ---- kartu statistik ---- */
+.com-stats {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.com-stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  width: auto;
+  min-height: 230px;
+  padding: 36px 32px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: none;
+  text-align: left;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+@media (hover: hover) {
+  .com-stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.18);
+  }
+}
+
+/* --- kartu kuning: judul di atas, teks di bawah --- */
+.com-stat-yellow {
+  justify-content: space-between;
+  background: linear-gradient(180deg, #feb800, #fed771);
+}
+
+.com-stat-yellow h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #000;
+  margin: 0;
+}
+
+.com-stat-yellow p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #011036;
+  margin: 0;
+}
+
+/* --- kartu biru: judul tengah di atas, angka 2 kolom --- */
+.com-stat-blue {
+  padding: 30px 32px 36px;
+  background: linear-gradient(0deg, #92a2ca, #012583);
+}
+
+.com-stat-blue h3 {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
+
+.com-stat-numbers {
+  flex: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  align-items: start;
+  gap: 32px;
+  padding: 16px 8px 0 16px;
+}
+
+.com-stat-number {
+  min-width: 0;
+  text-align: left;
+}
+
+.com-stat-number h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #fbb03b;
+  margin: 0;
+}
+
+.com-stat-number p {
+  margin: 12px 0 0 0;
+  font-family: 'Noto Serif', serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #fff;
+}
+
+.com-stats:not(.is-visible) .com-stat-card {
+  opacity: 0;
+}
+
+.com-stats.is-visible .com-stat-card {
+  animation: com-fade-up 0.7s ease backwards;
+}
+
+.com-stats.is-visible .com-stat-card:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+
+/* ========================================================= */
+/* RESPONSIVE LAYOUT HP & TABLET                             */
+/* ========================================================= */
+
+
+/* ---- tablet ---- */
+@media screen and (max-width: 1024px) {
+  .com-hero { min-height: 480px; padding: 64px 20px; }
+  .com-hero h1 { font-size: 52px; }
+  .com-hero-deco { width: 420px; height: 330px; }
+
+  .discover-scroll { grid-template-columns: repeat(2, 1fr); }
+  .discover-card { min-height: 460px; }
+
+  .gallery-grid-proportional { grid-template-rows: repeat(2, 180px); gap: 4px; }
+
+  .impact-marquee { height: 190px; }
+  .impact-logo { width: 100px; height: 100px; margin-right: 50px; }
+  .com-stats { grid-template-columns: 1fr 1.3fr; gap: 20px; }
+
+  .com-footer-links { flex-direction: column; align-items: stretch; gap: 28px; }
+  .com-footer-groups { justify-content: space-between; gap: 24px; }
+  .com-footer-top h2 { font-size: 30px; }
+}
+
+@media screen and (max-width: 900px) {
+  .com-gallery-new { padding: 35px 30px 50px; }
+  .section-title-center { font-size: 30px; }
+  .center-eyebrow { font-size: 20px; }
+  .com-impact { padding: 40px 30px 60px; }
+}
+
+/* ---- HP ---- */
+@media screen and (max-width: 600px) {
+  .com-nav { padding: 0 16px; }
+  .com-nav-profile { display: none; }
+  .com-nav-drawer { padding: 12px 16px 16px; }
+
+  .com-hero { min-height: 420px; padding: 48px 20px; }
+  .com-hero-tag { font-size: 13px; gap: 8px; margin-bottom: 20px; }
+  .com-hero-line { width: 32px; }
+  .com-hero h1 { font-size: 36px; margin-bottom: 14px; }
+  .com-hero p { font-size: 15px; margin-bottom: 28px; }
+  .com-breadcrumb { font-size: 14px; }
+  .com-hero-deco { width: 260px; height: 204px; }
+
+  .com-eyebrow { font-size: 18px; }
+  .com-discover { padding: 40px 16px; }
+  .discover-header { margin-bottom: 28px; }
+  .discover-header h2 { font-size: 24px; }
+  .discover-scroll { grid-template-columns: 1fr; gap: 20px; }
+  .discover-card { min-height: 0; }
+  .card-img-real { height: 210px; }
+  .card-content h3 { font-size: 20px; }
+
+  .com-gallery-new { padding: 30px 16px 45px; }
+  .insights-header-center { margin-bottom: 25px; }
+  .center-eyebrow { font-size: 18px; }
+  .section-title-center { font-size: 27px; }
+  .insights-desc { font-size: 13px; line-height: 1.5; margin-top: 18px; }
+
+  .gallery-grid-proportional {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 150px);
+    gap: 5px;
+  }
+
+  .gal-main-top     { grid-column: 1 / span 2; grid-row: 1; }
+  .gal-top-middle   { grid-column: 1;          grid-row: 2; }
+  .gal-top-right    { grid-column: 2;          grid-row: 2; }
+  .gal-bottom-left  { grid-column: 1;          grid-row: 3; }
+  .gal-bottom-right { grid-column: 2;          grid-row: 3; }
+  .gal-main-bottom  { grid-column: 1 / span 2; grid-row: 4; }
+
+  .com-impact { padding: 30px 16px 45px; }
+  .impact-marquee { height: 140px; margin-bottom: 20px; }
+  .impact-logo { width: 80px; height: 80px; margin-right: 36px; }
+  .com-stats { grid-template-columns: 1fr; gap: 16px; }
+  .com-stat-card { min-height: 0; padding: 24px; }
+  .com-stat-card h3 { font-size: 20px; }
+  .com-stat-numbers { padding: 0; gap: 8px; }
+  .com-stat-number h4 { font-size: 30px; }
+  .com-stat-number p { font-size: 13px; }
+
+  .com-footer { gap: 24px; padding: 32px 16px 24px; }
+  .com-footer-logo { width: 100px; height: 66px; }
+  .com-footer-top h2 { font-size: 24px; }
+  .com-footer-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 16px; }
+  .com-footer-col h3 { font-size: 18px; }
+  .com-footer-link { white-space: normal; font-size: 15px; }
+  .com-footer-copy { font-size: 13px; line-height: 18px; }
+}
