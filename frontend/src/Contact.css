@@ -1,0 +1,745 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Quicksand:wght@500&display=swap');
+/* ========================================================= */
+/* CSS CONTACT PAGE - TWO COLUMN LAYOUT                      */
+/* ========================================================= */
+
+.ct-page {
+  background-color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+ 
+.ct-page *,
+.ct-page *::before,
+.ct-page *::after {
+  box-sizing: border-box;
+}
+ 
+.ct-page h1,
+.ct-page h2,
+.ct-page p,
+.ct-page ul {
+  margin: 0;
+}
+ 
+.ct-page ul {
+  padding: 0;
+  list-style: none;
+}
+ 
+.ct-page a {
+  color: inherit;
+  text-decoration: none;
+}
+ 
+.ct-page img {
+  display: block;
+  max-width: 100%;
+}
+ 
+ 
+/* ========================================================= */
+/* 1. HERO                                                   */
+/* ========================================================= */
+.ct-hero {
+  position: relative;
+  margin-top: 80px;
+  padding: 80px 20px;
+  width: 100%;
+  min-height: 566px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(180deg, #fff, #999);
+}
+ 
+.ct-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 53%;
+}
+ 
+.ct-hero-deco {
+  position: absolute;
+  max-width: none !important;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+}
+ 
+.ct-hero-deco-left {
+  left: 0;
+  top: 0;
+}
+ 
+.ct-hero-deco-right {
+  left: 92%;
+  top: 74%;
+  transform: translate(-50%, -50%) rotate(90deg) scaleY(-1);
+}
+ 
+.ct-hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* animation: ct-fade-up 0.8s ease backwards; */
+}
+ 
+.ct-hero-tag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  font-size: 15px;
+  font-weight: 600;
+}
+ 
+.ct-hero-line {
+  width: 50px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #fdbe34;
+}
+ 
+.ct-hero h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #fff;
+}
+ 
+.ct-hero h1 span {
+  display: block;
+  color: #fdbe34;
+}
+ 
+.ct-hero p {
+  max-width: 506px;
+  margin-top: 28px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+}
+ 
+.ct-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 56px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.16px;
+  color: #fff;
+}
+ 
+.ct-breadcrumb .current {
+  color: #fdbe34;
+}
+ 
+ 
+/* ========================================================= */
+/* 2. CONTACT CARDS                                          */
+/* ========================================================= */
+.ct-section {
+  padding: 70px 20px 90px;
+  background-color: #fff;
+}
+ 
+.ct-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+ 
+.ct-card {
+  display: flex;
+  flex-direction: column;
+  padding: 36px 40px 40px;
+  border: 2px solid #d3d3d3;
+  border-radius: 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+ 
+.ct-card-info { background-color: #fff; }
+.ct-card-form { background-color: #f3f5fe; }
+ 
+@media (hover: hover) {
+  .ct-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 28px rgba(1, 37, 131, 0.18);
+  }
+}
+ 
+/* animasi muncul */
+.ct-grid:not(.is-visible) .ct-card {
+  opacity: 0;
+}
+ 
+.ct-grid.is-visible .ct-card {
+  animation: ct-fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation-delay: var(--delay, 0ms);
+}
+ 
+@keyframes ct-fade-up {
+  from { opacity: 0; transform: translateY(36px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+ 
+ 
+/* ---- bagian umum kartu ---- */
+.ct-icon-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid #fdbe34;
+  border-radius: 50%;
+  background-color: #fee5ae;
+  color: #012583;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+ 
+.ct-icon-circle svg { display: block; }
+ 
+.ct-icon-big { width: 80px; height: 80px; }
+.ct-icon-big svg { width: 48px; height: 48px; }
+.ct-icon-small { width: 56px; height: 56px; }
+.ct-icon-small svg { width: 30px; height: 30px; }
+ 
+.ct-card:hover .ct-icon-big {
+  transform: rotate(-8deg) scale(1.06);
+}
+ 
+.ct-title {
+  position: relative;
+  margin-top: 24px;
+  padding-bottom: 18px;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #000;
+}
+ 
+.ct-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #fbb03b;
+  /* transition: width 0.4s ease; */
+}
+ 
+.ct-card:hover .ct-title::after {
+  width: 100px;
+}
+ 
+.ct-lead {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+  text-align: justify;
+  color: #606060;
+}
+ 
+.ct-divider {
+  width: 100%;
+  height: 0;
+  margin: 28px 0;
+  border: 0;
+  border-top: 1px solid #e3e3e3;
+}
+ 
+ 
+/* ---- kontak ---- */
+.ct-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+ 
+.ct-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  transition: transform 0.3s ease;
+}
+ 
+.ct-contact-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+ 
+.ct-contact-label {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.18px;
+  color: #606060;
+}
+ 
+.ct-contact-value {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #012583;
+  overflow-wrap: anywhere;
+}
+ 
+@media (hover: hover) {
+  .ct-contact-item:hover {
+    transform: translateX(8px);
+  }
+ 
+  .ct-contact-item:hover .ct-icon-circle {
+    background-color: #fdbe34;
+    transform: scale(1.1);
+  }
+}
+ 
+ 
+/* ---- follow us ---- */
+.ct-follow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+ 
+.ct-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 36px;
+}
+ 
+.ct-social-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  color: #012583;
+  transition: transform 0.25s ease;
+}
+ 
+.ct-social-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+ 
+.ct-social-icon svg { display: block; width: 100%; height: 100%; }
+ 
+@media (hover: hover) {
+  .ct-social-link:hover { transform: translateY(-4px); }
+  .ct-social-link:hover .ct-social-icon { transform: scale(1.12) rotate(-6deg); }
+}
+ 
+ 
+/* ---- form ---- */
+.ct-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+ 
+.ct-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+ 
+.ct-input {
+  display: block;
+  width: 100%;
+  height: 64px;
+  padding: 0 22px;
+  border: 1px solid #b3b3b3;
+  border-radius: 15px;
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: #012583;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+ 
+.ct-input::placeholder {
+  color: #898989;
+  opacity: 1;
+}
+ 
+.ct-input:hover {
+  border-color: #7a7a7a;
+}
+ 
+.ct-input:focus {
+  border-color: #012583;
+  box-shadow: 0 0 0 4px rgba(1, 37, 131, 0.14);
+}
+ 
+.ct-input.invalid {
+  border-color: #d93025;
+}
+ 
+.ct-input.invalid:focus {
+  box-shadow: 0 0 0 4px rgba(217, 48, 37, 0.14);
+}
+ 
+.ct-textarea {
+  height: 120px;
+  padding: 18px 22px;
+  line-height: 1.5;
+  resize: vertical;
+  min-height: 100px;
+}
+ 
+.ct-error {
+  padding-left: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #d93025;
+}
+ 
+ 
+/* ---- dropzone ---- */
+.ct-dropzone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 12px 16px;
+  border: 1px dashed #000;
+  border-radius: 15px;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+}
+ 
+.ct-dropzone:hover,
+.ct-dropzone:focus-visible {
+  background-color: rgba(253, 190, 52, 0.12);
+  border-color: #012583;
+}
+ 
+.ct-dropzone.dragging {
+  background-color: rgba(253, 190, 52, 0.25);
+  border-color: #012583;
+  transform: scale(1.01);
+}
+ 
+.ct-dropzone.invalid { border-color: #d93025; }
+ 
+.ct-dropzone-icon {
+  display: block;
+  width: 28px;
+  height: 28px;
+  color: #012583;
+  transition: transform 0.3s ease;
+}
+ 
+.ct-dropzone-icon svg { display: block; width: 100%; height: 100%; }
+ 
+.ct-dropzone:hover .ct-dropzone-icon,
+.ct-dropzone.dragging .ct-dropzone-icon {
+  transform: translateY(-3px);
+}
+ 
+.ct-dropzone-title {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12px;
+  color: #012583;
+}
+ 
+.ct-dropzone-text {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12px;
+  color: #898989;
+}
+ 
+.ct-dropzone-text span { color: #012583; }
+ 
+.ct-dropzone-hint {
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.1px;
+  color: #7e7e7e;
+}
+ 
+.ct-dropzone-file {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  font-size: 12px;
+  font-weight: 600;
+  color: #012583;
+}
+ 
+.ct-dropzone-file span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+ 
+.ct-dropzone-file em {
+  flex-shrink: 0;
+  font-style: normal;
+  font-weight: 500;
+  color: #7e7e7e;
+}
+ 
+.ct-dropzone-file button {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: #012583;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+ 
+ 
+/* ---- tombol kirim ---- */
+.ct-btn-send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  height: 52px;
+  border: 0;
+  border-radius: 15px;
+  background-color: #fdbe34;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: #012583;
+  cursor: pointer;
+  box-shadow: 0 3px 0 rgba(1, 37, 131, 0.25);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.25s ease,
+    gap 0.3s ease;
+}
+ 
+.ct-btn-icon {
+  display: block;
+  width: 0;
+  height: 22px;
+  overflow: hidden;
+  opacity: 0;
+  transition: width 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+ 
+.ct-btn-icon svg { display: block; width: 22px; height: 22px; }
+ 
+@media (hover: hover) {
+  .ct-btn-send:hover:not(:disabled) {
+    gap: 10px;
+    transform: translateY(-3px);
+    background-color: #ffca4f;
+    box-shadow: 0 8px 16px rgba(253, 190, 52, 0.55);
+  }
+ 
+  .ct-btn-send:hover:not(:disabled) .ct-btn-icon {
+    width: 22px;
+    opacity: 1;
+    transform: translateX(2px);
+  }
+}
+ 
+.ct-btn-send:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: 0 1px 0 rgba(1, 37, 131, 0.25);
+}
+ 
+.ct-btn-send:focus-visible {
+  outline: 3px solid #012583;
+  outline-offset: 3px;
+}
+ 
+.ct-btn-send:disabled {
+  cursor: progress;
+  opacity: 0.75;
+}
+ 
+ 
+/* ---- catatan status ---- */
+.ct-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 24px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  color: #012583;
+}
+ 
+.ct-note-icon {
+  display: block;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+}
+ 
+.ct-note-icon svg { display: block; width: 100%; height: 100%; }
+ 
+.ct-note.sent  { color: #1a7f37; }
+.ct-note.error { color: #d93025; }
+ 
+ 
+/* ========================================================= */
+/* RESPONSIVE LAYOUT HP & TABLET                             */
+/* ========================================================= */
+ 
+/* ---- navbar jadi hamburger ---- */
+@media screen and (max-width: 1100px) {
+  .ct-nav-menu { display: none; }
+  .ct-nav-burger { display: flex; }
+ 
+  .ct-nav-drawer {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px 20px 20px;
+    background: linear-gradient(180deg, #feb800, #ffd463);
+    border-bottom: 1px solid #000;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+    transform-origin: top;
+    transform: scaleY(0);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+ 
+  .ct-nav-drawer.open {
+    transform: scaleY(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
+ 
+  .ct-nav-drawer .ct-nav-link {
+    justify-content: flex-start;
+    padding: 0 20px;
+  }
+}
+ 
+/* ---- tablet ---- */
+@media screen and (max-width: 1024px) {
+  .ct-hero { min-height: 480px; padding: 64px 20px; }
+  .ct-hero h1 { font-size: 50px; }
+  .ct-hero p { font-size: 18px; max-width: 480px; }
+  .ct-breadcrumb { margin-top: 44px; }
+  .ct-hero-deco { width: 420px; height: 330px; }
+ 
+  .ct-section { padding: 56px 24px 70px; }
+  .ct-grid { gap: 20px; }
+  .ct-card { padding: 30px 28px 32px; }
+  .ct-title { font-size: 28px; }
+  .ct-lead { font-size: 16px; }
+  .ct-contact-item { gap: 18px; }
+  .ct-contact-value { font-size: 17px; }
+  .ct-social-link { font-size: 17px; }
+  .ct-input { height: 58px; font-size: 16px; }
+  .ct-note { font-size: 16px; }
+}
+ 
+/* tablet portrait: kartu tersusun ke bawah */
+@media screen and (max-width: 860px) {
+  .ct-grid {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 640px;
+    gap: 24px;
+  }
+ 
+  .ct-card { padding: 32px 32px 36px; }
+  .ct-title { font-size: 30px; }
+  .ct-lead { font-size: 17px; }
+  .ct-input { font-size: 17px; }
+}
+ 
+/* ---- HP ---- */
+@media screen and (max-width: 600px) {
+  .ct-nav { padding: 0 16px; }
+  .ct-nav-profile { display: none; }
+  .ct-nav-drawer { padding: 12px 16px 16px; }
+ 
+  .ct-hero { min-height: 420px; padding: 48px 20px; }
+  .ct-hero-tag { font-size: 13px; gap: 8px; margin-bottom: 20px; }
+  .ct-hero-line { width: 32px; }
+  .ct-hero h1 { font-size: 32px; }
+  .ct-hero p { margin-top: 18px; font-size: 15px; }
+  .ct-breadcrumb { margin-top: 32px; font-size: 14px; }
+  .ct-hero-deco { width: 260px; height: 204px; }
+ 
+  .ct-section { padding: 36px 16px 50px; }
+  .ct-grid { gap: 20px; }
+  .ct-card { padding: 24px 20px 28px; border-radius: 16px; }
+ 
+  .ct-icon-big { width: 64px; height: 64px; }
+  .ct-icon-big svg { width: 38px; height: 38px; }
+  .ct-icon-small { width: 48px; height: 48px; }
+  .ct-icon-small svg { width: 26px; height: 26px; }
+ 
+  .ct-title { margin-top: 18px; padding-bottom: 14px; font-size: 24px; }
+  .ct-lead { font-size: 14px; text-align: left; }
+  .ct-divider { margin: 22px 0; }
+  .ct-contact-list { gap: 18px; }
+  .ct-contact-item { gap: 14px; }
+  .ct-contact-label { font-size: 14px; }
+  .ct-contact-value { font-size: 16px; }
+  .ct-social-list { gap: 14px 24px; }
+  .ct-social-link { font-size: 15px; gap: 8px; }
+  .ct-social-icon { width: 32px; height: 32px; }
+ 
+  .ct-form { gap: 14px; margin-top: 20px; }
+  .ct-input { height: 54px; padding: 0 16px; font-size: 15px; border-radius: 12px; }
+  .ct-textarea { height: 110px; padding: 14px 16px; }
+  .ct-dropzone { border-radius: 12px; }
+  .ct-btn-send { height: 50px; font-size: 17px; }
+  .ct-note { padding-top: 20px; font-size: 14px; }
+  .ct-note-icon { width: 24px; height: 24px; }
+}

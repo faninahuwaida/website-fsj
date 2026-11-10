@@ -192,7 +192,7 @@ const testimonialsData = [
 ];
 
 // Data untuk Blog
-const blogData = [
+export const blogData = [
   {
     id: 1,
     title: <>Participant Success Story: Journey to MT Program</>,
