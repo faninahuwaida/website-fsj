@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./AboutUs.css";
 import financialSustainabilityIcon from "../../assets/financial-sustainability.svg";
 import programExcellenceIcon from "../../assets/program-excellence.svg";

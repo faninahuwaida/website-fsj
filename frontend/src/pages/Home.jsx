@@ -1,21 +1,60 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
-const navLinks = [
-  { href: "#beranda", label: "Beranda" },
-  { href: "#features", label: "Fasilitas" },
-  { href: "#testimonials", label: "Testimoni" },
-  { href: "#contact", label: "Kontak" },
-];
+import careerReadinessImage from "../assets/home/career readiness.png";
+import selfDevelopmentImage from "../assets/home/self development.png";
+import sustainabilitySkillImage from "../assets/home/sustainability skill.png";
+
+// PROGRAM IMAGES
+import impactLeaderImage from "../assets/home/impact leader.png";
+import mentoringImage from "../assets/home/mentoring 1on1.png";
+import cvReviewImage from "../assets/home/cv review.png";
+import eLearningImage from "../assets/home/e-learning.png";
+
+// OUR IMPACT - EVENT IMAGES
+import charityImage from "../assets/home/fsj charity.png";
+import careerSummitImage from "../assets/home/career summit.png";
+import stepUpImage from "../assets/home/step up collage.png";
+import bootcampImage from "../assets/home/bootcamp series.png";
+import peopleDevelopmentImage from "../assets/home/people development.png";
+import stepTalkImage from "../assets/home/step talk series.png";
+
+// TESTIMONIAL IMAGES
+import insafImage from "../assets/home/insaf.png";
+import vikriaImage from "../assets/home/vikria.png";
+import nurFitriImage from "../assets/home/nur fitri.png";
+import alyaImage from "../assets/home/alya.png";
+import revanisaImage from "../assets/home/revanisa.png";
+
+import unpabLogo from "../assets/home/UNPAB.png";
+import usmLogo from "../assets/home/USM.png";
+import poltesaLogo from "../assets/home/Poltesa.png";
+import undipLogo from "../assets/home/UNDIP.png";
+import ummLogo from "../assets/home/UMM.png";
+
+//OUR BLOG
+import participantSuccessImg from "../assets/home/participant success.png";
+import ragamCeritaImg from "../assets/home/ragam cerita.png";
+import beyondExpectationsImg from "../assets/home/beyond expectations.png";
+import coasterraImg from "../assets/home/coasterra connecting.png";
+
+const impactImages = {
+  "FSJ Charity": charityImage,
+  "Career Summit": careerSummitImage,
+  "Step Up Collage": stepUpImage,
+  "Bootcamp Series": bootcampImage,
+  "People Development Training": peopleDevelopmentImage,
+  "Step Talk Series": stepTalkImage,
+};
+
 
 // Data untuk Our Impact
-
 const impactData = [
   {
     id: 1,
     title: "FSJ Charity",
     alt: "FSJ Charity",
-    image: "", // Isi path gambar nanti
+    image: charityImage,
     path: "/events/charity",
     reverse: false,
   },
@@ -29,7 +68,7 @@ const impactData = [
       </>
     ),
     alt: "Career Summit",
-    image: "",
+    image: careerSummitImage,
     path: "/events/career-summit",
     reverse: true,
   },
@@ -43,7 +82,7 @@ const impactData = [
       </>
     ),
     alt: "Step Up Collage",
-    image: "",
+    image: stepUpImage,
     path: "/events/step-up",
     reverse: false,
   },
@@ -57,7 +96,7 @@ const impactData = [
       </>
     ),
     alt: "Bootcamp Series",
-    image: "",
+    image: bootcampImage,
     path: "/events/bootcamp",
     reverse: true,
   },
@@ -73,7 +112,7 @@ const impactData = [
       </>
     ),
     alt: "People Development Training",
-    image: "",
+    image: peopleDevelopmentImage,
     path: null,
     reverse: false,
   },
@@ -87,11 +126,12 @@ const impactData = [
       </>
     ),
     alt: "Step Talk Series",
-    image: "",
+    image: stepTalkImage,
     path: "/events/step-talk",
     reverse: true,
   },
 ];
+
 
 // Data untuk Testimoni
 const testimonialsData = [
@@ -101,8 +141,8 @@ const testimonialsData = [
     alt: "Insaf",
     role: "Peserta Bootcamp Series",
     university: "UNPAB",
-    uniLogo: "", // Kosongkan dulu
-    image: "", // Kosongkan dulu
+    uniLogo: unpabLogo,
+    image: insafImage,
     text: "Webinar First Step Journey\nkemarin was really insightful! ✨\nBanyak hal baru yang aku dapat,\nterutama tentang personal\nbranding dan how to make a CV\nstand out. Penyampaiannya fun,\nrelatable, dan pastinya applicable\nuntuk pengembangan diri ke\ndepannya. 🚀💡",
   },
   {
@@ -111,8 +151,8 @@ const testimonialsData = [
     alt: "Vikria",
     role: "Peserta Career Summit",
     university: "USM",
-    uniLogo: "",
-    image: "",
+    uniLogo: usmLogo,
+    image: vikriaImage,
     text: "Lebih dari sekadar seminar,\nCareer Summit ini benar-benar\nmenjawab keresahan Quarter-\nLife Crisis (QLC) saya.\nPenjelasannya mudah dipahami\ndan sukses memotivasi saya\nuntuk menyiapkan karier impian\ndari sekarang.",
   },
   {
@@ -125,8 +165,8 @@ const testimonialsData = [
     alt: "Nur Fitri",
     role: "Volunteer Batch 1",
     university: "Poltesa",
-    uniLogo: "",
-    image: "",
+    uniLogo: poltesaLogo,
+    image: nurFitriImage,
     text: "Tumbuh di daerah ujung\nKalimantan Barat dengan\npeluang yang terbatas, justru\nmemotivasi saya untuk berani\nmencoba hal baru. Melalui FSJ,\nsaya membuktikan bahwa jarak\ndaerah bukan penghalang untuk\nberkontribusi dan memberikan\ndampak 🤩",
   },
   {
@@ -135,8 +175,8 @@ const testimonialsData = [
     alt: "Alya",
     role: "Intern Batch 2",
     university: "UNDIP",
-    uniLogo: "",
-    image: "",
+    uniLogo: undipLogo,
+    image: alyaImage,
     text: "Meski awalnya penuh tantangan\nbaru, perjalanan di FSJ justru\nmembawa saya menjadi PIC FSJ x\nMandiri Career Summit. Sebuah\npengalaman berharga yang tidak\nakan terlupakan. Terima kasih\nFSJ!",
   },
   {
@@ -145,8 +185,8 @@ const testimonialsData = [
     alt: "Revanisa",
     role: "Peserta Bootcamp Series",
     university: "UMM",
-    uniLogo: "",
-    image: "",
+    uniLogo: ummLogo,
+    image: revanisaImage,
     text: "The material delivered was\ninsightful and really helped me\nprepare for my future career.\nSince personal branding is a key\naspect in building a career, and\nknowing how to create a proper\nCV has boosted my confidence in\nthe recruitment process.",
   },
 ];
@@ -157,7 +197,7 @@ const blogData = [
     id: 1,
     title: <>Participant Success Story: Journey to MT Program</>,
     alt: "Participant Success Story: Journey to MT Program",
-    image: "", // Kosongkan dulu
+    image: participantSuccessImg,
   },
   {
     id: 2,
@@ -168,7 +208,7 @@ const blogData = [
       </>
     ),
     alt: "Ragam Cerita Bertumbuh: Menemukan Ruang, Peluang & Keberanian di FSJ",
-    image: "", // Kosongkan dulu
+    image: ragamCeritaImg,
   },
   {
     id: 3,
@@ -183,7 +223,7 @@ const blogData = [
       </>
     ),
     alt: "Beyond Expectations: Kisah Dedikasi Dua Best Intern FSJ",
-    image: "", // Kosongkan dulu
+    image: beyondExpectationsImg,
   },
   {
     id: 4,
@@ -199,7 +239,7 @@ const blogData = [
       </>
     ),
     alt: "Coasterra: Connecting People, Science & Action for Resilient Coasts",
-    image: "", // Kosongkan dulu
+    image: coasterraImg,
   },
 ];
 
@@ -658,7 +698,7 @@ export default function Home() {
               </div>
               <div className="about-image-card border-blue">
                 <img
-                  src="/img/"
+                  src={careerReadinessImage}
                   alt="Career Readiness"
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
@@ -668,7 +708,7 @@ export default function Home() {
             <div className="about-row row-reverse">
               <div className="about-image-card border-yellow">
                 <img
-                  src="/img/"
+                  src={selfDevelopmentImage}
                   alt="Self Development"
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
@@ -706,7 +746,7 @@ export default function Home() {
               </div>
               <div className="about-image-card border-blue">
                 <img
-                  src="/img/"
+                  src={sustainabilitySkillImage}
                   alt="Sustainability Skills"
                   style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
@@ -733,7 +773,7 @@ export default function Home() {
             <div className="offer-item">
               <div className="offer-number">01</div>
               <div className="offer-image-wrapper">
-                <img src="" alt="Impact Leader Indonesia" />
+                <img src={impactLeaderImage} alt="Impact Leader Indonesia" />
               </div>
               <div className="offer-content">
                 <h3>
@@ -756,7 +796,7 @@ export default function Home() {
             <div className="offer-item">
               <div className="offer-number">02</div>
               <div className="offer-image-wrapper">
-                <img src="" alt="Mentoring 1on1" />
+                <img src={mentoringImage} alt="Mentoring 1on1" />
               </div>
               <div className="offer-content">
                 <h3>Mentoring 1on1</h3>
@@ -778,7 +818,7 @@ export default function Home() {
             <div className="offer-item">
               <div className="offer-number">03</div>
               <div className="offer-image-wrapper">
-                <img src="" alt="CV Review" />
+                <img src={cvReviewImage} alt="CV Review" />
               </div>
               <div className="offer-content">
                 <h3>CV Review</h3>
@@ -800,7 +840,7 @@ export default function Home() {
             <div className="offer-item">
               <div className="offer-number">04</div>
               <div className="offer-image-wrapper">
-                <img src="" alt="E-Learning" />
+                <img src={eLearningImage} alt="E-Learning" />
               </div>
               <div className="offer-content">
                 <h3>E-Learning</h3>
@@ -823,8 +863,8 @@ export default function Home() {
       </section>
 
       {/* -------------------------------------------------------------------
-          BAGIAN OUR IMPACT
-      ---------------------------------------------------------------------- */}
+    BAGIAN OUR IMPACT
+---------------------------------------------------------------------- */}
       <section id="our-impact" className="impact-section">
         <div className="impact-container reveal">
           <div className="impact-footprints-bg">
@@ -838,6 +878,9 @@ export default function Home() {
 
           <div className="impact-timeline">
             {impactData.map((item) => {
+              // Mengambil gambar berdasarkan alt
+              const image = item.image || impactImages[item.alt];
+
               const rowContent = (
                 <>
                   <div className="impact-text">
@@ -846,9 +889,9 @@ export default function Home() {
 
                   <div className="impact-image-container">
                     <div className="impact-img-box">
-                      {item.image && (
+                      {image && (
                         <img
-                          src={item.image}
+                          src={image}
                           alt=""
                           aria-hidden="true"
                           className="impact-img-blur-bg"
@@ -856,11 +899,13 @@ export default function Home() {
                       )}
 
                       <div
-                        className={`impact-inner-frame ${item.image ? "has-photo" : ""}`}
+                        className={`impact-inner-frame ${
+                          image ? "has-photo" : ""
+                        }`}
                       >
-                        {item.image && (
+                        {image && (
                           <img
-                            src={item.image}
+                            src={image}
                             alt={item.alt}
                             className="impact-img-main has-photo"
                           />
@@ -924,24 +969,27 @@ export default function Home() {
                           alt={`Logo ${item.university}`}
                         />
                       </div>
+
                       <span>{item.university}</span>
                     </div>
                   </div>
 
                   <div className="testi-image-container">
                     <div className="testi-image-placeholder">
-                      <img
-                        src={item.image}
-                        alt={`Foto ${item.alt}`}
-                        className={item.image ? "testi-img-sharp" : ""}
-                      />
                       {item.image && (
-                        <img
-                          src={item.image}
-                          alt=""
-                          aria-hidden="true"
-                          className="testi-img-blur"
-                        />
+                        <>
+                          <img
+                            src={item.image}
+                            alt={`Foto ${item.alt}`}
+                            className="testi-img-sharp"
+                          />
+                          <img
+                            src={item.image}
+                            alt=""
+                            aria-hidden="true"
+                            className="testi-img-blur"
+                          />
+                        </>
                       )}
                     </div>
                     <div className="testi-image-overlay"></div>
