@@ -1,0 +1,598 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+
+/* =========================================================
+   BOOTCAMP PAGE
+   ========================================================= */
+
+.bootcamp-page {
+  width: 100%;
+
+  background: #ffffff;
+  color: #1f1f1f;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.bootcamp-hero {
+  width: 100%;
+  min-height: 400px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+
+
+.bootcamp-hero-overlay {
+  width: 100%;
+  min-height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px 24px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(1, 37, 131, 0.9) 0%,
+    rgba(254, 184, 0, 0.9) 100%
+  );
+}
+
+
+.bootcamp-hero-content {
+  width: 100%;
+  max-width: 900px;
+
+  text-align: center;
+
+  transform: translateY(10px);
+}
+
+
+.bootcamp-hero-content h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(30px, 5vw, 45px);
+  font-weight: 700;
+  line-height: 1.2;
+
+  transform: translateY(-20px);
+}
+
+
+.bootcamp-hero-content p {
+  margin: 12px 0 0;
+
+  color: #feb800;
+
+  font-family: "Noto Serif", serif;
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 500;
+  line-height: 1.4;
+
+  transform: translateY(-10px);
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.bootcamp-main {
+  width: min(1180px, calc(100% - 48px));
+
+  margin: 0 auto;
+  padding: 65px 0 100px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    270px;
+
+  gap: 75px;
+
+  align-items: start;
+}
+
+
+.bootcamp-content {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.bootcamp-section {
+  margin-bottom: 70px;
+
+  scroll-margin-top: 110px;
+}
+
+
+.bootcamp-section--last {
+  margin-bottom: 0;
+}
+
+
+.bootcamp-section h2 {
+  margin: 0 0 24px;
+
+  color: #171717;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+
+.bootcamp-section h3,
+.bootcamp-subsection h3 {
+  margin: 0 0 15px;
+
+  color: #171717;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+
+.bootcamp-section p,
+.bootcamp-subsection p,
+.bootcamp-media-text p {
+  margin: 0 0 17px;
+
+  color: #333333;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  text-align: justify;
+}
+
+.bootcamp-section .bootcamp-dual-caption {
+  width: 100%;
+
+  margin-top: 40px;
+  margin-bottom: 35px;
+
+  color: #333333;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  text-align: justify;
+}
+
+.bootcamp-list-intro {
+  margin: 22px 0 10px;
+}
+
+
+/* =========================================================
+   SUBSECTION
+   ========================================================= */
+
+.bootcamp-subsection {
+  margin-top: 32px;
+
+  scroll-margin-top: 110px;
+}
+
+
+/* =========================================================
+   MEDIA ROW
+   ========================================================= */
+
+.bootcamp-media-row {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
+
+  gap: 35px;
+
+  align-items: start;
+
+  margin-top: 20px;
+}
+
+
+.bootcamp-media-row--image-right {
+  grid-template-columns:
+    minmax(0, 1.1fr)
+    minmax(0, 0.9fr);
+}
+
+
+.bootcamp-media-image {
+  width: 100%;
+}
+
+
+.bootcamp-media-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+.bootcamp-media-text {
+  min-width: 0;
+}
+
+/* =========================================================
+   FLOW TEXT AROUND IMAGE
+   ========================================================= */
+
+.bootcamp-flow-section {
+  margin-top: 18px;
+}
+
+.bootcamp-flow-section::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.bootcamp-flow-section p {
+  margin: 0 0 17px;
+
+  color: #333333;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+
+  text-align: justify;
+}
+
+.bootcamp-flow-image {
+  display: block;
+
+  width: 330px;
+  max-width: 42%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+.bootcamp-flow-section--right .bootcamp-flow-image {
+  float: right;
+  margin: 0 0 18px 28px;
+}
+
+.bootcamp-flow-section--left .bootcamp-flow-image {
+  float: left;
+  margin: 0 28px 18px 0;
+}
+
+
+/* =========================================================
+   SERIES 2 DUAL IMAGE
+   ========================================================= */
+
+.bootcamp-dual-image {
+  width: 85%;
+
+  margin: 30px auto 0;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 30px;
+
+  align-items: center;
+}
+
+.bootcamp-dual-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   LIST
+   ========================================================= */
+
+.bootcamp-list {
+  margin: 15px 0 20px;
+
+  padding-left: 22px;
+
+  color: #333333;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+
+.bootcamp-list li {
+  margin-bottom: 7px;
+}
+
+
+.bootcamp-list strong {
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.bootcamp-sidebar {
+  min-width: 0;
+}
+
+
+.bootcamp-sidebar-inner {
+  position: sticky;
+
+  top: 110px;
+}
+
+
+.bootcamp-sidebar h3 {
+  margin: 0 0 25px;
+
+  color: #171717;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+
+.bootcamp-toc {
+  display: flex;
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+
+.bootcamp-toc a {
+  position: relative;
+
+  display: block;
+
+  padding-left: 16px;
+
+  color: #4a4a4a;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.55;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.bootcamp-toc a::before {
+  content: "";
+
+  position: absolute;
+
+  top: 3px;
+  left: 0;
+
+  width: 2px;
+  height: calc(100% - 6px);
+
+  background: #e1e1e1;
+
+  border-radius: 5px;
+
+  transition: background 0.2s ease;
+}
+
+
+.bootcamp-toc a:hover {
+  color: #0050b5;
+
+  transform: translateX(2px);
+}
+
+
+.bootcamp-toc a:hover::before {
+  background: #feb800;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+.bootcamp-reveal {
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+
+.bootcamp-reveal.show {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .bootcamp-main {
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+  }
+
+
+  .bootcamp-sidebar {
+    grid-row: 1;
+  }
+
+
+  .bootcamp-sidebar-inner {
+    position: static;
+  }
+
+
+  .bootcamp-media-row,
+  .bootcamp-media-row--image-right {
+    grid-template-columns: 1fr;
+  }
+
+
+  .bootcamp-dual-image {
+    width: 100%;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .bootcamp-hero,
+  .bootcamp-hero-overlay {
+    min-height: 250px;
+  }
+
+
+  .bootcamp-hero-content {
+    transform: none;
+  }
+
+
+  .bootcamp-hero-content h1 {
+    font-size: 30px;
+
+    transform: none;
+  }
+
+
+  .bootcamp-hero-content p {
+    font-size: 17px;
+
+    transform: none;
+  }
+
+
+  .bootcamp-main {
+    width: calc(100% - 32px);
+
+    padding: 42px 0 70px;
+  }
+
+
+  .bootcamp-section h2 {
+    font-size: 24px;
+  }
+
+
+  .bootcamp-section h3,
+  .bootcamp-subsection h3 {
+    font-size: 18px;
+  }
+
+
+  .bootcamp-section p,
+  .bootcamp-subsection p,
+  .bootcamp-media-text p,
+  .bootcamp-list {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  .bootcamp-section p,
+  .bootcamp-subsection p,
+  .bootcamp-media-text p {
+    text-align: left;
+  }
+
+
+  .bootcamp-dual-image {
+    grid-template-columns: 1fr;
+
+    width: 85%;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .bootcamp-reveal {
+    opacity: 1;
+
+    transform: none;
+
+    transition: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .bootcamp-flow-image {
+    float: none !important;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0 0 18px 0 !important;
+  }
+
+  .bootcamp-flow-section p {
+    text-align: left;
+  }
+}
